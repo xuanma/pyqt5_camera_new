@@ -174,7 +174,7 @@ class MainProgram(QWidget):
                print('error with the serial port')
             else:
                print("Waiting for triggering signal")
-               self.timer_serial.start()
+               self.timer_serial.start(5)
                self.ui.Button_trigger.setEnabled(False)
         else:
             QMessageBox.information(self, "Info", "Please open cameras first", QMessageBox.Yes | QMessageBox.No)
